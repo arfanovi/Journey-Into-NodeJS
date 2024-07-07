@@ -24,12 +24,17 @@ function test() {
 console.log(global.num);
 global.test();
 
-// Concept is = global.test is not a function
-
-/* 
-    NodeJS every Individual file is Module/Package/Or any
 
 
 
+// 
+    // Concept is = global.test is not a function
 
-*/
+    // NodeJS every Individual file is Module/Package/Or any
+
+
+
+
+
+
+
