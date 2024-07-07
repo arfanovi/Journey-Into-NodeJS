@@ -17,7 +17,7 @@ Good for Highly Extensible, Data intensive and Real TIme Apps.
 # Installing NodeJS
     : Search NodeJs into official website NodeJS download and Install
     : Version Check . GO windows searchBar type cmd or Node .
-    : Check version [node --]
+    : Check version [node --v]
 
 
 
