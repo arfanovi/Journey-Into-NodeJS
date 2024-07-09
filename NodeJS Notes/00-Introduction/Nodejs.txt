@@ -1,0 +1,53 @@
+
+
+
+javascript created as client side language 
+
+
+
+
+Using Node js Platform Javascript Can Do :
+     * Querying the database 
+     * Operation over database
+     * Access/Write a file on server 
+     * Server Side Request , Response handle
+     * Software backend Operation
+
+
+Node JS Library 
+    NodeJs Platform
+    Third party Library Management 
+
+
+FAQ 
+    a. Is Node js a programming language ?
+    b. What previous knowledge required for Node JS ?
+    
+
+Tools 
+    a. Node Js app 
+    b. VS Code 
+
+
+Module 
+    What is Module ?
+
+    Types of Node Module -----------
+    * Core Module => "http, url, path, fs, util , query string "
+    * Local Module 
+    * Third Party Module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

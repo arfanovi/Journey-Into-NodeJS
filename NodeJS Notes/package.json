@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-ostad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-Main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node 05-url-module.js"
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
