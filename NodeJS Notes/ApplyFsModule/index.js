@@ -1,3 +1,5 @@
+
+/*
 let fs = require('fs');
 let http = require('http');
 
@@ -25,3 +27,27 @@ let server = http.createServer(function (req, res) {
 server.listen(1000, () => {
     console.log('Server is running on port 1000');
 });
+
+
+*/
+
+
+
+
+
+// Sync 
+
+let fs = require('fs');
+let http = require('http');
+
+let server2 = http.createServer(function (req, res) {
+    if(req.url = "/"){
+        let myData = fs.readFileSync('Home.html');
+        res.writeHead(200, {'Content-Type':'text/html'});
+        res.write(myData)
+    }
+
+})
+
+server2.listen(2000);
+console.log('Server is running ')
