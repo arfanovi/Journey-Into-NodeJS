@@ -54,8 +54,11 @@ console.log('Server is running ')
 
 */
 
-// Async Write 
 
+
+
+// Async Write 
+/*
 let fs = require('fs');
 let http = require('http');
 
@@ -64,6 +67,51 @@ let server2 = http.createServer(function (req, res) {
 
 
         fs.writeFile('demo.txt', 'Hello World', function (err) {
+
+            if(err) {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File write Fail');
+                res.end();
+
+            } else {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write("File is Success");
+                res.end()
+            }
+            
+        });
+
+
+        // let myData = fs.readFileSync('Home.html');
+        // res.writeHead(200, {'Content-Type':'text/html'});
+        // res.write(myData)
+    }
+
+})
+
+server2.listen(2000);
+console.log('Server is running ')
+
+
+*/
+
+
+
+
+
+
+
+
+// Sync Write 
+
+let fs = require('fs');
+let http = require('http');
+
+let server2 = http.createServer(function (req, res) {
+    if(req.url == "/"){
+
+
+       let err=  fs.writeFileSync('demoSync.txt', 'Hello World Sync', function (err) {
 
             if(err) {
                 res.writeHead(200, {'Content-Type': 'text/html'});
