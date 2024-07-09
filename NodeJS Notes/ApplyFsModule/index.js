@@ -136,3 +136,38 @@ let server2 = http.createServer(function (req, res) {
 
 server2.listen(2000);
 console.log('Server is running ')
+
+
+
+
+
+
+
+// Rename 
+
+let fs = require('fs');
+let http = require('http');
+
+let server2 = http.createServer(function (req, res) {
+    if(req.url == "/"){
+
+
+        fs.rename('demo.txt', 'demoNew.txt', function (err) {
+
+            if(err){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Rename Fail');
+                res.end();
+            } else {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Rename Success');
+                res.end();
+            }
+
+        })
+    }
+
+})
+
+server2.listen(2000);
+console.log('Server is running ');
