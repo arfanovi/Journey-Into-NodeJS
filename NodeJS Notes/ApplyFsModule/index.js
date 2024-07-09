@@ -249,7 +249,7 @@ console.log('Server is running ');
 // Sync Delete file 
 
 // Delete File Sync 
-
+/*
 let fs = require('fs');
 let http = require('http');
 
@@ -271,3 +271,38 @@ let server2 = http.createServer(function (req, res) {
 
 server2.listen(4000);
 console.log('Server is running ');
+
+
+*/
+
+
+
+
+// exist file sync 
+
+
+// Sync FIle Exist 
+
+
+
+let fs = require('fs');
+let http = require('http');
+
+let server = http.createServer(function (req, res) {
+    if(req.url=="/"){
+
+      let result =   fs.existsSync("demo.txt");
+
+      if(result) {
+        res.end('True')
+      } else {
+        res.end('False')
+      }
+
+
+    }
+})
+
+
+server.listen(5000);
+console.log('exist server Running')
