@@ -214,7 +214,10 @@ console.log('Server Rename Running ')
 
 
 
+// Delete File Async 
 
+
+/*
 let fs = require('fs');
 let http = require('http');
 
@@ -233,6 +236,36 @@ let server2 = http.createServer(function (req, res) {
             }
 
         })
+    }
+})
+
+server2.listen(4000);
+console.log('Server is running ');
+
+
+*/
+
+
+// Sync Delete file 
+
+// Delete File Sync 
+
+let fs = require('fs');
+let http = require('http');
+
+let server2 = http.createServer(function (req, res) {
+    if(req.url == "/"){
+
+       let err =  fs.unlinkSync('sync-delete-file.txt')
+            if(err){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Delete Fail');
+                res.end();
+            } else {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Delete Success');
+                res.end();
+            }
     }
 })
 
