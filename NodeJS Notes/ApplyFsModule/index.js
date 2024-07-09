@@ -181,6 +181,8 @@ console.log('Server is running ');
 
 // File Rename Sync 
 
+
+/*
 let fs = require('fs');
 let http = require('http');
 
@@ -205,3 +207,34 @@ let server = http.createServer(function (req, res) {
 
 server.listen(3000);
 console.log('Server Rename Running ')
+
+*/
+
+
+
+
+
+
+let fs = require('fs');
+let http = require('http');
+
+let server2 = http.createServer(function (req, res) {
+    if(req.url == "/"){
+
+        fs.unlink('deleteA.txt', function(err) {
+            if(err){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Delete Fail');
+                res.end();
+            } else {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File Delete Success');
+                res.end();
+            }
+
+        })
+    }
+})
+
+server2.listen(4000);
+console.log('Server is running ');
